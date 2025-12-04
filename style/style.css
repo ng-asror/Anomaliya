@@ -2,6 +2,16 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+*::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -28,12 +38,16 @@ header {
   background-color: rgba(8, 7, 13, 0.77);
   -webkit-backdrop-filter: blur(25px);
           backdrop-filter: blur(25px);
-  position: absolute;
+  position: fixed;
   z-index: 2;
   top: 0;
   left: 0;
   width: 100%;
   padding-block: 20px;
+  transition: padding-block ease-out 0.5s;
+}
+header.sticky {
+  padding-block: 10px;
 }
 
 .header-wrapper {
@@ -84,12 +98,14 @@ header {
 /*===== hero start =====*/
 #hero {
   background: radial-gradient(90.88% 92.84% at 68.75% 103.9%, #e6b8a8 20.37%, #be9fc6 33.36%, #1f47af 70.78%, #08070d 100%);
+  overflow: hidden;
 }
 #hero .container {
   align-content: center;
   width: 100%;
   height: 100dvh;
   position: relative;
+  z-index: 1;
 }
 
 .hero-wrapper {
@@ -160,6 +176,7 @@ header {
   position: absolute;
   top: 0;
   right: -10px;
+  z-index: -1;
 }
 .heroes__img {
   overflow: hidden;
@@ -168,4 +185,79 @@ header {
   display: block;
 }
 
-/*===== hero end =====*//*# sourceMappingURL=style.css.map */
+/*===== hero end =====*/
+/*===== encounter start =====*/
+#encounter {
+  padding-top: 156px;
+}
+#encounter .title {
+  max-width: 897px;
+  margin-inline: auto;
+  text-align: center;
+  color: #fff;
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 130%; /* 52px */
+  margin-bottom: 50px;
+}
+#encounter .title span {
+  display: inline-block;
+  color: rgba(255, 255, 255, 0.5);
+}
+#encounter .encounter__card {
+  min-height: 550px;
+  --bg1: #969696;
+  --bg2: #be9fc6;
+  --bg3: #1f47af;
+  --bg4: #08070d;
+  background: radial-gradient(62.98% 103.11% at 47.31% 116.85%, #969696 33.36%, rgba(150, 150, 150, 0.35) 70.78%, rgba(8, 7, 13, 0.1) 100%);
+  padding-bottom: 126px;
+  align-content: end;
+  position: relative;
+  transition: ease-out all 10s;
+  z-index: 1;
+}
+#encounter .encounter__card::after {
+  content: " ";
+  width: 100%;
+  height: 153px;
+  position: absolute;
+  z-index: -1;
+  background: radial-gradient(78.62% 97.81% at 47.4% 100%, rgba(8, 7, 13, 0) 71.62%, #08070d 95.45%);
+  bottom: -10px;
+  left: 0;
+  transform: rotate(180deg);
+}
+#encounter .encounter__card.show {
+  background: radial-gradient(62.98% 103.11% at 47.31% 116.85%, #e6b8a8 20.37%, #be9fc6 33.36%, #1f47af 70.78%, #08070d 100%);
+}
+#encounter .encounter__card .container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: flex-end;
+  justify-content: space-between;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+}
+#encounter .encounter__card-about h3 {
+  color: #fff;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 115%; /* 36.8px */
+  margin-bottom: 12px;
+}
+#encounter .encounter__card-about h4 {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 125%; /* 25px */
+}
+#encounter .encounter__card-about.right {
+  padding-left: 60px;
+  opacity: 0;
+}
+#encounter .encounter-img {
+  display: block;
+}
+
+/*===== encounter end =====*//*# sourceMappingURL=style.css.map */
