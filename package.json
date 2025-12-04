@@ -1,0 +1,9 @@
+{
+  "type": "module",
+  "devDependencies": {
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "gsap": "^3.13.0"
+  }
+}

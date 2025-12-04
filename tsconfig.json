@@ -1,0 +1,46 @@
+{
+  "compilerOptions": {
+    // File Layout
+    "rootDir": "./",
+    "outDir": "./js",
+
+    // Environment Settings
+    "module": "NodeNext", // NodeNext yoki Node16
+    "moduleResolution": "NodeNext",
+    "target": "ES2020", // ES6/ES2020/ESNext
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "types": [],
+
+    // Optional: Node.js tiplarini ishlatish uchun
+    // "lib": ["ESNext"],
+    // "types": ["node"],
+    // npm install -D @types/node
+
+    // Other Outputs
+    "sourceMap": true,
+    "declaration": true,
+    "declarationMap": true,
+
+    // Stricter Typechecking Options
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+
+    // Style Options
+    // "noImplicitReturns": true,
+    // "noImplicitOverride": true,
+    // "noUnusedLocals": true,
+    // "noUnusedParameters": true,
+    // "noFallthroughCasesInSwitch": true,
+    // "noPropertyAccessFromIndexSignature": true,
+
+    // Recommended Options
+    "strict": true,
+    "jsx": "react-jsx",
+    "verbatimModuleSyntax": true,
+    "isolatedModules": true,
+    "noUncheckedSideEffectImports": true,
+    "moduleDetection": "force",
+    "skipLibCheck": true
+  }
+}

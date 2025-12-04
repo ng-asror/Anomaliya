@@ -6,12 +6,96 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Аномалия — самая доступная экосистема для развития бизнеса</title>
 	<link rel="icon" type="image/x-icon" href="images/logo.svg">
+	<!-- Fonst -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap"
+		rel="stylesheet">
+	<!-- preloads -->
+	<link rel="preload" as="image" href="images/heroes.webp">
 	<!-- style -->
 	<link rel="stylesheet" href="style/style.css">
 </head>
 
 <body>
-
+	<div class="wrapper">
+		<!-- header start -->
+		<header>
+			<div class="container">
+				<div class="header-wrapper">
+					<a href="index.html" class="logo"><img src="images/logo.svg" alt="logo icon" width="32" height="32"
+							fetchpriority="high" referrerpolicy="origin-when-cross-origin"></a>
+					<ul class="navlink">
+						<li><a href="#">Что такое Аномалия</a></li>
+						<li><a href="#">о Михаиле Гребенюке</a></li>
+						<li><a href="#">Наша команда</a></li>
+						<li><a href="#">Статьи</a></li>
+					</ul>
+					<a href="#" class="login-btn">
+						<img src="svg/user.svg" alt="user icon" width="20" height="20" fetchpriority="high"
+							referrerpolicy="origin-when-cross-origin">
+						Войти
+					</a>
+				</div>
+			</div>
+		</header>
+		<!-- header end -->
+		<!-- hero start -->
+		<section id="hero">
+			<div class="container">
+				<div class="hero-wrapper">
+					<h1 class="title">Аномалия — самая доступная экосистема для развития бизнеса</h1>
+					<h5 class="subtitle">Аномалия помогает масштабировать уровень жизни через новые знания, действия
+						и сообщество по всей России
+					</h5>
+					<div class="hero-wrapper-series">
+						<div class="serie">
+							<img src="images/serie-detal-left.webp" width="23.003" height="69.01" alt="left detal"
+								fetchpriority="high" referrerpolicy="origin-when-cross-origin">
+							<div>
+								<h5>27 000+</h5>
+								<h6>Действующих резидентов</h6>
+							</div>
+							<img src="images/serie-detal-right.webp" width="23.003" height="69.01" alt="right detal"
+								fetchpriority="high" referrerpolicy="origin-when-cross-origin">
+						</div>
+						<div class="serie">
+							<img src="images/serie-detal-left.webp" width="23.003" height="69.01" alt="left detal"
+								fetchpriority="high" referrerpolicy="origin-when-cross-origin">
+							<div>
+								<h5>100</h5>
+								<h6>Городов присутствия</h6>
+							</div>
+							<img src="images/serie-detal-right.webp" width="23.003" height="69.01" alt="right detal"
+								fetchpriority="high" referrerpolicy="origin-when-cross-origin">
+						</div>
+						<div class="serie">
+							<img src="images/serie-detal-left.webp" width="23.003" height="69.01" alt="left detal"
+								fetchpriority="high" referrerpolicy="origin-when-cross-origin">
+							<div>
+								<h5>100+</h5>
+								<h6>Обучающих материалов</h6>
+							</div>
+							<img src="images/serie-detal-right.webp" width="23.003" height="69.01" alt="right detal"
+								fetchpriority="high" referrerpolicy="origin-when-cross-origin">
+						</div>
+					</div>
+					<a href="#" class="hero-wrapper__btn">Стать частью Аномалии</a>
+				</div>
+				<div class="heroes">
+					<img src="images/heroes.webp" alt="heros.png" width="599" height="760" fetchpriority="high"
+						referrerpolicy="origin-when-cross-origin">
+					<img src="images/heroes.webp" alt="heros.png" width="599" height="760" fetchpriority="high"
+						referrerpolicy="origin-when-cross-origin">
+				</div>
+			</div>
+		</section>
+		<!-- hero end -->
+	</div>
+	<!-- script -->
+	<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+	<script src="js/app.js"></script>
 </body>
 
 </html>
