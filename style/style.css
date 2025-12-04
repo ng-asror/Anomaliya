@@ -161,11 +161,11 @@ header {
   top: 0;
   right: -10px;
 }
+.heroes__img {
+  overflow: hidden;
+}
 .heroes img {
   display: block;
-}
-.heroes img:last-child {
-  margin-top: -150px;
 }
 
 /*===== hero end =====*//*# sourceMappingURL=style.css.map */
