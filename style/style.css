@@ -562,7 +562,7 @@ header.sticky {
 }
 
 .relevant-splide {
-  margin-top: 75px;
+  margin-block: 75px 60px;
 }
 .relevant-splide .splide__track {
   overflow: hidden;
@@ -702,5 +702,32 @@ header.sticky {
   opacity: 1;
   z-index: 2;
 }
+.relevant-btn {
+  border-radius: 999px;
+  border: 2px solid rgba(255, 255, 255, 0.32);
+  background: linear-gradient(180deg, #fff 0%, #fff 100%);
+  box-shadow: 0 4px 3px 0 rgba(255, 255, 255, 0.15) inset;
+  padding: 20px 32px;
+  color: #000;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 150%; /* 27px */
+  display: block;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-inline: auto;
+  text-decoration: none;
+}
 
-/*===== relevant end =====*//*# sourceMappingURL=style.css.map */
+/*===== relevant end =====*/
+/*===== Visionary start =====*/
+#visionary {
+  width: 100%;
+  max-width: 1440px;
+  margin-inline: auto;
+  border-radius: 40px 40px 90px 90px;
+  background: radial-gradient(127.4% 127.4% at 47.31% -25.31%, #e6b8a8 20.37%, #be9fc6 33.36%, #1f47af 70.78%, #08070d 100%);
+}
+
+/*===== Visionary end =====*//*# sourceMappingURL=style.css.map */
