@@ -816,4 +816,69 @@ header.sticky {
   line-height: 120%; /* 21.6px */
 }
 
-/*===== Visionary end =====*//*# sourceMappingURL=style.css.map */
+/*===== Visionary end =====*/
+/*===== practice start =====*/
+#practice {
+  padding-block: 100px 160px;
+}
+#practice h2.title {
+  text-align: center;
+  color: #fff;
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 130%; /* 52px */
+}
+
+.practice-splide {
+  margin-top: 75px;
+}
+.practice-splide .splide__arrow {
+  display: none;
+}
+.practice-card {
+  width: 100%;
+}
+.practice-card__img {
+  display: block;
+  width: 100%;
+  border-radius: 24px;
+  border: 1.5px solid rgba(255, 255, 255, 0.15);
+  margin-bottom: 16px;
+}
+.practice-card__bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  -moz-column-gap: 8px;
+       column-gap: 8px;
+}
+.practice-card__bottom h5 {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 120%; /* 21.6px */
+  letter-spacing: 0.5px;
+  display: -webkit-box;
+  -webkit-line-clamp: 1; /* Number of lines to show */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.practice-card__bottom button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  flex-shrink: 0;
+  cursor: pointer;
+}
+.practice-card__bottom button img {
+  transform: translateX(1px);
+  display: block;
+}
+
+/*===== practice end =====*//*# sourceMappingURL=style.css.map */

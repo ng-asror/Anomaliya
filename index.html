@@ -414,6 +414,76 @@
 					</div>
 				</section>
 				<!-- visionary end -->
+
+				<!-- practice start -->
+				<section id="practice">
+					<div class="container">
+						<h2 class="title">Годы практики в сжатом формате</h2>
+						<div class="splide practice-splide">
+							<div class="splide__track">
+								<ul class="splide__list">
+									<li class="splide__slide">
+										<div class="practice-card" title="Как выстроить маркетинг">
+											<img src="images/practice/practice1.webp" alt="Как выстроить маркетинг" class="practice-card__img"
+												width="291.5" height="162.786" fetchpriority="low" referrerpolicy="origin-when-cross-origin"
+												loading="lazy">
+											<div class="practice-card__bottom">
+												<h5>Как выстроить маркетинг lorem</h5>
+												<button type="button">
+													<img src="svg/play.svg" alt="play icon" width="16" height="16" fetchpriority="low"
+														loading="lazy" referrerpolicy="origin-when-cross-origin">
+												</button>
+											</div>
+										</div>
+									</li>
+									<li class="splide__slide">
+										<div class="practice-card" title="Как выстроить маркетинг">
+											<img src="images/practice/practice2.webp" alt="Как выстроить маркетинг" class="practice-card__img"
+												width="291.5" height="162.786" fetchpriority="low" referrerpolicy="origin-when-cross-origin"
+												loading="lazy">
+											<div class="practice-card__bottom">
+												<h5>Качни свой продукт</h5>
+												<button type="button">
+													<img src="svg/play.svg" alt="play icon" width="16" height="16" fetchpriority="low"
+														loading="lazy" referrerpolicy="origin-when-cross-origin">
+												</button>
+											</div>
+										</div>
+									</li>
+									<li class="splide__slide">
+										<div class="practice-card" title="Как выстроить маркетинг">
+											<img src="images/practice/practice3.webp" alt="Как выстроить маркетинг" class="practice-card__img"
+												width="291.5" height="162.786" fetchpriority="low" referrerpolicy="origin-when-cross-origin"
+												loading="lazy">
+											<div class="practice-card__bottom">
+												<h5>Зачем нужен ассистент</h5>
+												<button type="button">
+													<img src="svg/play.svg" alt="play icon" width="16" height="16" fetchpriority="low"
+														loading="lazy" referrerpolicy="origin-when-cross-origin">
+												</button>
+											</div>
+										</div>
+									</li>
+									<li class="splide__slide">
+										<div class="practice-card" title="Как выстроить маркетинг">
+											<img src="images/practice/practice4.webp" alt="Как выстроить маркетинг" class="practice-card__img"
+												width="291.5" height="162.786" fetchpriority="low" referrerpolicy="origin-when-cross-origin"
+												loading="lazy">
+											<div class="practice-card__bottom">
+												<h5>Рост х2 за одно действие</h5>
+												<button type="button">
+													<img src="svg/play.svg" alt="play icon" width="16" height="16" fetchpriority="low"
+														loading="lazy" referrerpolicy="origin-when-cross-origin">
+												</button>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- practice end -->
 			</div>
 		</div>
 	</div>
@@ -428,13 +498,19 @@
 	<script src="js/splide.js"></script>
 	<script type="module" src="js/app.js"></script>
 	<script>
-		var splide = new Splide('.relevant-splide.splide', {
+		new Splide('.relevant-splide.splide', {
 			type: 'loop',
 			perPage: 3,
 			perMove: 1,
 			gap: 24,
-		});
-		splide.mount();
+		}).mount();
+		new Splide('.practice-splide.splide', {
+			type: 'loop',
+			perPage: 4,
+			perMove: 1,
+			gap: 24,
+		}).mount();
+
 	</script>
 </body>
 
