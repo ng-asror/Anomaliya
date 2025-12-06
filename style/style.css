@@ -723,11 +723,97 @@ header.sticky {
 /*===== relevant end =====*/
 /*===== Visionary start =====*/
 #visionary {
+  position: relative;
+  overflow: hidden;
   width: 100%;
   max-width: 1440px;
   margin-inline: auto;
   border-radius: 40px 40px 90px 90px;
-  background: radial-gradient(127.4% 127.4% at 47.31% -25.31%, #e6b8a8 20.37%, #be9fc6 33.36%, #1f47af 70.78%, #08070d 100%);
+  padding-top: 100px;
+  background-image: url("../svg/visionary-bg.svg"), radial-gradient(127.4% 127.4% at 47.31% -25.31%, #e6b8a8 20.37%, #be9fc6 33.36%, #1f47af 70.78%, #08070d 100%);
+  background-position: top center, top center;
+  background-size: contain, cover;
+  background-repeat: no-repeat, no-repeat;
+}
+#visionary::before {
+  content: " ";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 296.859px;
+  z-index: 4;
+  background: linear-gradient(180deg, rgba(8, 7, 13, 0) 0%, #08070d 100%);
+}
+#visionary .title-block {
+  text-align: center;
+  position: relative;
+  z-index: 4;
+}
+#visionary .title-block h5 {
+  color: #fff;
+  font-size: 20.921px;
+  font-weight: 400;
+  line-height: 20.921px; /* 100% */
+  letter-spacing: -0.314px;
+  margin-bottom: 25px;
+}
+#visionary .title-block h1 {
+  color: #fff;
+  font-size: 64px;
+  font-weight: 500;
+  line-height: 100%; /* 64px */
+  letter-spacing: -2.092px;
+}
+#visionary .title-block h1 span {
+  color: rgba(255, 255, 255, 0.5);
+}
+#visionary .visionary-main-img {
+  margin-top: -250px;
+  margin-inline: auto;
+  display: block;
+  position: relative;
+  z-index: 3;
+}
+#visionary .visionary-cards {
+  position: absolute;
+  top: 10%;
+  padding-inline: 40px;
+  width: 100%;
+  height: 80%;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: minmax(170px, auto) minmax(170px, auto);
+  justify-content: space-between;
+  align-items: anchor-center;
+}
+#visionary .visionary-cards .card {
+  opacity: 0.7;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.12);
+  width: 100%;
+  max-width: 280px;
+  min-height: 170px;
+  padding: 19px 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+#visionary .visionary-cards .card:nth-child(odd) {
+  transform: rotate(10deg) skewX(10deg);
+}
+#visionary .visionary-cards .card:nth-child(even) {
+  transform: rotate(-10deg) skewX(-10deg);
+}
+#visionary .visionary-cards .card img {
+  display: block;
+}
+#visionary .visionary-cards .card h5 {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 120%; /* 21.6px */
 }
 
 /*===== Visionary end =====*//*# sourceMappingURL=style.css.map */

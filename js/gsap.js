@@ -112,8 +112,22 @@ const sticky = document.querySelector(".results-wrapper__left");
 ScrollTrigger.create({
 	trigger: wrapper,
 	start: "top+=60 top",
-	end: `${wrapper.offsetHeight += sticky.offsetHeight}px`,
+	end: `${wrapper.offsetHeight += sticky.offsetHeight += sticky.offsetHeight / 2}px`,
 	pin: sticky,
 	pinSpacing: false,
 	scrub: true
 });
+
+/* ===== visionary section ===== */
+
+ScrollTrigger.create({
+	trigger: '#visionary',
+	start: 'top center',
+	onEnter: () => {
+		gsap.to('.visionary-cards', {
+			padding: "150px 100px",
+			duration: 2,
+			ease: 'power3.in'
+		})
+	}
+})
