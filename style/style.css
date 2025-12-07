@@ -1072,4 +1072,62 @@ header.sticky {
   bottom: 11%;
 }
 
-/*===== world end =====*//*# sourceMappingURL=style.css.map */
+/*===== world end =====*/
+/* ===== environment start =====*/
+.environment {
+  padding-bottom: 228px;
+  background: radial-gradient(62.98% 103.11% at 47.31% 116.85%, #e6b8a8 20.37%, #be9fc6 33.36%, #1f47af 70.78%, #08070d 100%);
+  position: relative;
+}
+.environment::before {
+  position: absolute;
+  content: " ";
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 296.859px;
+  background: linear-gradient(180deg, rgba(8, 7, 13, 0) 0%, #08070d 100%);
+}
+.environment h2.title {
+  color: #fff;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 130%; /* 52px */
+}
+.environment .relevant-btn {
+  margin-block: 64px 86px;
+}
+.environment-cards {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  -moz-column-gap: 25px;
+       column-gap: 25px;
+}
+.environment-cards .card {
+  border-radius: 32px;
+  background: rgba(255, 255, 255, 0.05);
+  width: 100%;
+  max-width: calc(25% - 18.75px);
+  padding: 40px 12px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  justify-content: flex-end;
+}
+.environment-cards .card img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.environment-cards .card h4 {
+  color: #f7f9fa;
+  text-align: center;
+  font-feature-settings: "liga" off, "clig" off;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 135%; /* 27px */
+}
+
+/* ===== environment end =====*//*# sourceMappingURL=style.css.map */
