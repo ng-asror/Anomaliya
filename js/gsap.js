@@ -7,11 +7,11 @@ gsap.registerPlugin(
 );
 
 /*===== body =====*/
-ScrollSmoother.create({
-	smooth: 2,
-	effects: true,
-	normalizeScroll: true
-})
+// ScrollSmoother.create({
+// 	smooth: 2,
+// 	effects: true,
+// 	normalizeScroll: true
+// })
 
 const header = document.querySelector('header');
 

@@ -680,6 +680,77 @@
 					</div>
 				</section>
 				<!-- environment end -->
+
+				<!-- blog start -->
+				<section class="blog">
+					<div class="container">
+						<div class="blog-head">
+							<h2>Блог <span>1256</span></h2>
+							<a href="blog.html">Смотреть все <img src="svg/arrow-right.svg" alt="arrow right icon" width="7"
+									height="13" referrerpolicy="origin-when-cross-origin" fetchpriority="low" loading="lazy"></a>
+						</div>
+						.<div class="splide blog-splide" aria-label="Splide Basic HTML Example">
+							<div class="splide__track">
+								<ul class="splide__list">
+									<li class="splide__slide">
+										<div class="card">
+											<div class="card-img">
+												<img src="images/blog/blog1.webp" alt="Как создать маркетинговую стратегию"
+													referrerpolicy="origin-when-cross-origin" fetchpriority="low" loading="lazy">
+											</div>
+											<div class="card-about">
+												<div class="flex">
+													<h5>Конференция</h5>
+													<h5>Запись</h5>
+													<h5>16 октября</h5>
+												</div>
+												<h3>Как создать маркетинговую стратегию</h3>
+												<h5>Пошаговое руководство по созданию маркетинговой стратегии</h5>
+											</div>
+										</div>
+									</li>
+									<li class="splide__slide">
+										<div class="card">
+											<div class="card-img">
+												<img src="images/blog/blog2.webp" alt="Как создать дорожную карту продукта"
+													referrerpolicy="origin-when-cross-origin" fetchpriority="low" loading="lazy">
+											</div>
+											<div class="card-about">
+												<div class="flex">
+													<h5>Конференция</h5>
+													<h5>Запись</h5>
+													<h5>16 октября</h5>
+												</div>
+												<h3>Как создать дорожную карту продукта</h3>
+												<h5>Пошаговое руководство по созданию дорожной карты продукта</h5>
+											</div>
+										</div>
+									</li>
+									<li class="splide__slide">
+										<div class="card">
+											<div class="card-img">
+												<img src="images/blog/blog3.webp" alt="Как создать маркетинговую кампанию"
+													referrerpolicy="origin-when-cross-origin" fetchpriority="low" loading="lazy">
+											</div>
+											<div class="card-about">
+												<div class="flex">
+													<h5 class="popular"><img src="svg/popular.svg" alt="popular icon" width="25.67" height="25.67"
+															referrerpolicy="origin-when-cross-origin" fetchpriority="low" loading="lazy"> Популярное
+													</h5>
+													<h5>Запись</h5>
+													<h5>16 октября</h5>
+												</div>
+												<h3>Как создать маркетинговую кампанию</h3>
+												<h5>Пошаговое руководство по созданию маркетинговой кампании</h5>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- blog end -->
 			</div>
 		</div>
 	</div>
@@ -711,6 +782,12 @@
 			perPage: 2,
 			perMove: 1,
 			focus: 'center',
+			gap: 16,
+			easing: 'cubic-bezier(0.36, 0, 0.64, 1)'
+		}).mount()
+		new Splide('.blog-splide.splide', {
+			perPage: 3,
+			perMove: 1,
 			gap: 16,
 			easing: 'cubic-bezier(0.36, 0, 0.64, 1)'
 		}).mount()
