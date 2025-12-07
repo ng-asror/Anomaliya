@@ -878,7 +878,8 @@ header {
 
 /*===== Visionary end =====*/
 /*===== practice start =====*/
-#practice {
+
+.practice {
   padding-block: 100px 160px;
   h2.title {
     text-align: center;
@@ -887,11 +888,8 @@ header {
     font-weight: 500;
     line-height: 130%; /* 52px */
   }
-}
-
-.practice {
   &-splide {
-    margin-top: 75px;
+    margin-block: 75px 160px;
     .splide__arrow {
       display: none;
     }
@@ -900,10 +898,39 @@ header {
     width: 100%;
     &__img {
       display: block;
-      width: 100%;
       border-radius: 24px;
       border: 1.5px solid rgba(255, 255, 255, 0.15);
       margin-bottom: 16px;
+      position: relative;
+      overflow: hidden;
+      .lock {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        row-gap: 12px;
+        flex-direction: column;
+        position: absolute;
+        inset: 0;
+        background-color: rgba(0, 0, 0, 0.8);
+        img {
+          display: block;
+        }
+        .badge {
+          color: #fff;
+          font-family: $inter;
+          font-size: 20px;
+          font-weight: 600;
+          line-height: 120%; /* 24px */
+          letter-spacing: 0.5px;
+          padding: 12px;
+          border-radius: 90px;
+          background: #2d2c31;
+        }
+      }
+      img {
+        display: block;
+        width: 100%;
+      }
     }
     &__bottom {
       display: flex;
@@ -922,6 +949,12 @@ header {
         -webkit-box-orient: vertical;
         overflow: hidden;
         text-overflow: ellipsis;
+        &:not(:first-child) {
+          margin-top: 12px;
+        }
+        span {
+          opacity: 0.5;
+        }
       }
       button {
         display: flex;
@@ -935,11 +968,174 @@ header {
         flex-shrink: 0;
         cursor: pointer;
         img {
-          transform: translateX(1px);
           display: block;
+          &.play-icon {
+            transform: translateX(1px);
+          }
+        }
+      }
+    }
+  }
+  &-wrapper {
+    h2.title {
+      text-align: start;
+      span {
+        color: rgba(255, 255, 255, 0.5);
+      }
+    }
+    &__cards {
+      margin-top: 68px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      .practice-card {
+        &__img {
+          border-radius: 37.176px;
+        }
+        max-width: calc(50% - 12px);
+        &__bottom {
+          align-items: flex-start;
+          button {
+            width: 55px;
+            height: 55px;
+          }
         }
       }
     }
   }
 }
 /*===== practice end =====*/
+/*===== community start =====*/
+.community {
+  h2.title {
+    color: #fff;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 120%; /* 48px */
+    max-width: 1040px;
+    margin-inline: auto;
+    position: relative;
+    z-index: 1;
+    span {
+      background: linear-gradient(
+        198deg,
+        #e6b8a8 41.41%,
+        #be9fc6 51.71%,
+        #1f47af 67.95%,
+        #08070d 196.36%
+      );
+      -webkit-text-fill-color: transparent;
+      -webkit-background-clip: text;
+      background-clip: text;
+      text-fill-color: transparent;
+    }
+    &::before {
+      content: attr(txt);
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      transform: translatex(1px);
+    }
+  }
+  &-splide {
+    margin-block: 75px;
+    .splide__arrow,
+    .splide__pagination {
+      display: none;
+    }
+    .splide__track {
+      border-radius: 32px;
+    }
+    .splide__slide {
+      border-radius: 32px;
+      overflow: hidden;
+      transition: ease-out all 0.3s;
+      img {
+        width: 100%;
+        height: 500px;
+        display: block;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+  }
+}
+/*===== community end =====*/
+/*===== world start =====*/
+.world {
+  padding-top: 150px;
+  h2.title {
+    color: #fff;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 130%; /* 52px */
+    position: relative;
+    z-index: 1;
+    span {
+      color: rgba(255, 255, 255, 0.5);
+    }
+  }
+  &-wrapper {
+    position: relative;
+    .world-img {
+      display: block;
+      width: 100%;
+      height: auto;
+      margin-top: -100px;
+    }
+    &__card {
+      text-align: center;
+      display: inline-block;
+      position: absolute;
+      z-index: 1;
+      img {
+        display: block;
+        border-radius: 27.056px;
+        border: 4px solid #fff;
+        margin-bottom: 15px;
+        margin-inline: auto;
+      }
+      h5 {
+        color: #fff;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 150%; /* 27px */
+        &:last-child {
+          line-height: 120%;
+          opacity: 0.5;
+        }
+      }
+      &.europa {
+        left: 7%;
+        top: 46%;
+      }
+      &.russia-center {
+        top: 38%;
+        left: 25.5%;
+      }
+      &.dubay {
+        left: 29.5%;
+        bottom: 67px;
+      }
+      &.kazaxstan {
+        left: 47%;
+        bottom: 29%;
+      }
+      &.russia {
+        right: 29%;
+        top: 34%;
+      }
+      &.china {
+        right: 21.5%;
+        bottom: 22%;
+      }
+      &.indoneziya {
+        right: 6.5%;
+        bottom: 11%;
+      }
+    }
+  }
+}
+/*===== world end =====*/
