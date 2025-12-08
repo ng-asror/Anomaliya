@@ -3,14 +3,17 @@ gsap.registerPlugin(
 	Observer,
 	ScrollTrigger,
 	ScrollSmoother,
-	ScrollToPlugin
+	ScrollToPlugin,
 );
 
 /*===== body =====*/
 ScrollSmoother.create({
+	wrapper: '#smooth-wrapper',
+	content: '#smooth-content',
 	smooth: 2,
 	effects: true,
-	normalizeScroll: true
+	normalizeScroll: true,
+	ignore: '.relevant__card-about'
 })
 
 const header = document.querySelector('header');
