@@ -15,8 +15,8 @@
 	<!-- preloads -->
 	<link rel="preload" as="image" href="images/heroes.webp">
 	<!-- style -->
-	<link rel="stylesheet" href="style/splide.css">
 	<link rel="stylesheet" href="style/odometer.css">
+	<link rel="stylesheet" href="style/splide.css">
 	<link rel="stylesheet" href="style/style.css">
 </head>
 
@@ -108,15 +108,21 @@
 								<img src="images/heroes.webp" alt="heros.png" width="599" height="612" fetchpriority="high"
 									referrerpolicy="origin-when-cross-origin">
 							</div>
+							<div class="heroes__img">
+								<img src="images/heroes.webp" alt="heros.png" width="599" height="612" fetchpriority="high"
+									referrerpolicy="origin-when-cross-origin">
+							</div>
 						</div>
 					</div>
 				</section>
 				<!-- hero end -->
 				<!-- encounter start -->
 				<section id="encounter">
-					<h1 class="title">Когда встречаете в жизни Аномалию, <span>которая не входит в рамки привычного
-							миропонимания, есть 2
-							пути</span></h1>
+					<div class="container">
+						<h1 class="title">Когда встречаете в жизни Аномалию, <span>которая не входит в рамки привычного
+								миропонимания, есть 2
+								пути</span></h1>
+					</div>
 					<div class="encounter__card">
 						<div class="container">
 							<div class="encounter__card-about left">
@@ -413,6 +419,25 @@
 						</div>
 					</div>
 				</section>
+				<div class="visionary-mob">
+					<div class="visionary-mob__cards">
+						<div>
+							<img src="svg/visionary/card1.svg" alt="card icon" referrerpolicy="origin-when-cross-origin"
+								fetchpriority="low" loading="lazy" width="24" height="24">
+							<h5>Автор 4 бест-селлеров по бизнесу</h5>
+						</div>
+						<div>
+							<img src="svg/visionary/card2.svg" alt="card icon" referrerpolicy="origin-when-cross-origin"
+								fetchpriority="low" loading="lazy" width="24" height="24">
+							<h5>Спикер №1 по продажам в РФ</h5>
+						</div>
+						<div>
+							<img src="svg/visionary/card3.svg" alt="card icon" referrerpolicy="origin-when-cross-origin"
+								fetchpriority="low" loading="lazy" width="24" height="24">
+							<h5>Более 1 миллиона подписчиков на ютуб-канале</h5>
+						</div>
+					</div>
+				</div>
 				<!-- visionary end -->
 
 				<!-- practice start -->
@@ -604,6 +629,10 @@
 						<img src="images/world/world-all.webp" class="world-img"
 							alt="От Калининграда до Бали — сплочённое сообщество в 100+ городах, где люди помогают друг другу"
 							referrerpolicy="origin-when-cross-origin" fetchpriority="low" loading="lazy">
+						<img src="images/world-mob.webp" class="world-img world-img--mob"
+							alt="От Калининграда до Бали — сплочённое сообщество в 100+ городах, где люди помогают друг другу"
+							referrerpolicy="origin-when-cross-origin" fetchpriority="low" loading="lazy">
+
 						<!-- <div class="world-wrapper__card europa">
 							<img src="images/world/world1.webp" width="116.34" height="116.34" alt="Европа" title="Европа"
 								referrerpolicy="origin-when-cross-origin" fetchpriority="low" loading="lazy">
@@ -888,8 +917,8 @@
 	<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollSmoother.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollToPlugin.min.js"></script>
 	<script src="js/gsap.js"></script>
-	<script src="js/odometer.js"></script>
 	<script src="js/splide.js"></script>
+	<script src="js/odometer.js"></script>
 	<script type="module" src="js/app.js"></script>
 	<script>
 		new Splide('.relevant-splide.splide', {
@@ -905,11 +934,21 @@
 				1100: {
 					type: 'slide',
 					perPage: 2,
+				},
+				768: {
+					type: 'loop',
+					perPage: 1.5
+				},
+				625: {
+					type: "slide",
+					perPage: 1.2
+				},
+				500: {
+					perPage: 1.1
 				}
 			}
 		}).mount();
 		new Splide('.practice-splide.splide', {
-			type: 'slide',
 			perPage: 4,
 			perMove: 1,
 			gap: 24,
@@ -917,6 +956,15 @@
 				1290: {
 					perPage: 3,
 					gap: 15
+				},
+				768: {
+					type: 'loop',
+					perPage: 1.5,
+					perMove: 1,
+					gap: 25
+				},
+				500: {
+					perPage: 1.1
 				}
 			}
 		}).mount();
@@ -930,6 +978,11 @@
 			breakpoints: {
 				1290: {
 					perPage: 1,
+				},
+				768: {
+					padding: 40
+				}, 450: {
+					padding: 0
 				}
 			}
 		}).mount()
@@ -942,11 +995,15 @@
 			breakpoints: {
 				1290: {
 					perPage: 2,
-				}
+				},
+				768: {
+					perPage: 1.1,
+					gap: 20
+				},
 			}
 		}).mount()
 
-
+		let mm = gsap.matchMedia();
 		/*===== hero section =====*/
 		const heroes = gsap.utils.toArray('.heroes__img');
 		const distance = heroes[0].offsetHeight;
@@ -1049,16 +1106,18 @@
 				})
 			}
 		})
-		const wrapper = document.querySelector("#results");
-		const sticky = document.querySelector(".results-wrapper__left");
-		ScrollTrigger.create({
-			trigger: wrapper,
-			start: "top+=60 top",
-			end: `${wrapper.offsetHeight += sticky.offsetHeight += sticky.offsetHeight / 2}px`,
-			pin: sticky,
-			pinSpacing: false,
-			scrub: true
-		});
+		mm.add('(min-width: 769px)', () => {
+			const wrapper = document.querySelector("#results");
+			const sticky = document.querySelector(".results-wrapper__left");
+			ScrollTrigger.create({
+				trigger: wrapper,
+				start: "top+=60 top",
+				end: `${wrapper.offsetHeight += sticky.offsetHeight += sticky.offsetHeight / 2}px`,
+				pin: sticky,
+				pinSpacing: false,
+				scrub: true
+			});
+		})
 
 		/* ===== visionary section ===== */
 		ScrollTrigger.create({
@@ -1072,7 +1131,6 @@
 				});
 			}
 		});
-		let mm = gsap.matchMedia();
 
 		mm.add('(max-width: 1290px)', () => {
 			ScrollTrigger.create({
@@ -1121,6 +1179,55 @@
 						}, 0)
 				},
 			})
+		})
+		mm.add('(max-width: 768px)', () => {
+			ScrollTrigger.create({
+				trigger: '#visionary',
+				start: 'top center',
+				onEnter: () => {
+					gsap.to('.visionary-cards', {
+						padding: "150px 80px",
+						duration: 2,
+						ease: 'power3.in'
+					});
+				}
+			});
+			ScrollTrigger.create({
+				trigger: encounter,
+				start: 'bottom bottom',
+				onEnter: () => encounterAboutFN(),
+			})
+
+			function encounterAboutFN() {
+				const tl = gsap.timeline({ defaults: { ease: 'power1.out' } });
+
+				tl.to('.encounter__card', {
+					'--after-opacity': 1,
+					duration: 3,
+					ease: 'power3.inOut'
+				}, 0) // timeline boshida
+					.to('#speed', {
+						rotation: 190,
+						transformOrigin: "50% 50%",
+						duration: 3,
+						ease: 'power3.inOut'
+					}, 0) // bir vaqtda boshlansin
+					.to('img.strelka', {
+						rotation: 180,
+						duration: 2.80,
+						ease: 'power3.inOut'
+					}, 0); // bir vaqtda boshlansin
+
+
+				tl.to('.encounter__card-about.right', {
+					opacity: 1,
+					duration: 3,
+				}, "-=1.5")
+					.to('.encounter__card-about.left', {
+						opacity: 0,
+						duration: 3,
+					}, "<")
+			}
 		})
 	</script>
 </body>
